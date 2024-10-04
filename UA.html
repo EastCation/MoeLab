@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>检测浏览器 UA-萌雨实验室</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>检测浏览器 User-Agent (UA)</h2>
+    <p>点击下面的按钮以查看您的浏览器的 User-Agent 字符串。</p>
+    <button onclick="getBrowserInfo()">获取 UA 信息</button><br>
+    <pre id="userAgent"></pre>
+</div>
+
+<script>
+function getBrowserInfo() {
+    var userAgent = navigator.userAgent;
+    document.getElementById("userAgent").textContent = userAgent;
+}
+</script>
+</body>
+</html>
